@@ -26,8 +26,8 @@ sudo chown ubuntu:ubuntu -R /var/www/
 mkdir /var/www/$ID-$NAME
 
 echo " \o/ \o/ \o/ \o/ \o/"
-awk '{gsub("folder", '$ID'-'$NAME')}1' example.conf > example.tmp && mv example.tmp example_1.conf
-awk '{gsub("domain", '$DOMAIN')}1' example_1.conf > example_1.tmp && mv example_1.tmp $ID-$NAME.conf
+awk '{gsub("folder", "'$ID'-'$NAME'")}1' example.conf > example.tmp && mv example.tmp example_1.conf
+awk '{gsub("domain", "'$DOMAIN'")}1' example_1.conf > example_1.tmp && mv example_1.tmp $ID-$NAME.conf
 sudo mv ~/install_LAMP/$ID-$NAME.conf /etc/apache2/sites-available/$ID-$NAME.conf
 sudo a2dissite 000-default.conf
 sudo a2ensite $ID-$NAME.conf
