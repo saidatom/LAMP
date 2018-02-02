@@ -43,7 +43,7 @@ echo "Install Gulp"
 sudo apt-get install nodejs
 sudo apt-get install npm
 sudo ln -s /usr/bin/nodejs /usr/bin/node
-npm install --global gulp-cli
+sudo npm install --global gulp-cli
 
 echo "\o/"
 echo "\o/ \o/"
