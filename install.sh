@@ -42,6 +42,7 @@ composer global require drush/drush:8.1.15
 echo "Install Gulp"
 sudo apt-get install nodejs
 sudo apt-get install npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
 npm install --global gulp-cli
 
 echo "\o/"
